@@ -24,9 +24,9 @@ function addBreadCrumbs(){
     });
   });
 }
-function wrapHtml(titles) {
-  var styles = `<link rel="stylesheet" href="/css/index.css" />
-                <link rel="stylesheet" href="/shCoreRDark.css" />`;
+function wrapHtml(titles, siteRoot) {
+  var styles = `<link rel="stylesheet" href="${siteRoot}css/index.css" />
+                <link rel="stylesheet" href="${siteRoot}shCoreRDark.css" />`;
   return through.obj(function(file, encoding, callback) {
     var path = helpers.getPath(file),
         title = titles[path] || "Docs",

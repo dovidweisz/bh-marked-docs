@@ -1,8 +1,8 @@
 <!DOCTYPE html>
                   <html>
                   <head>
-                    <link rel="stylesheet" href="/css/index.css" />
-                <link rel="stylesheet" href="/shCoreRDark.css" />
+                    <link rel="stylesheet" href="/bh-marked-docs/css/index.css" />
+                <link rel="stylesheet" href="/bh-marked-docs/shCoreRDark.css" />
                     <title>Icons</title>
                   </head>
                   <body>
@@ -18,13 +18,13 @@ available can be found <strong><a href="../../../docs/icon-list.html">here</a></
 to the char-code representing that glyph in the generated 
 icon-font.)</p>
 <h4 id="example">Example</h4>
-<pre><code class="lang-html"><div id="highlighter_289689" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">span</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"icon icon-airplane"</code><code class="plain">>&lt;/</code><code class="keyword">span</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-html"><div id="highlighter_974115" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">span</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"icon icon-airplane"</code><code class="plain">>&lt;/</code><code class="keyword">span</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <h3 id="-platform-icon">{{platform}}-icon</h3>
 <p><code>.desktop-icon</code> and <code>.mobile-icon</code> do the same as <code>.icon</code>,
 but only for the specified platform</p>
 <h4 id="example">Example</h4>
-<pre><code class="lang-html"><div id="highlighter_460965" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">span</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"icon-mobile icon-airplane"</code><code class="plain">>&lt;/</code><code class="keyword">span</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-html"><div id="highlighter_25354" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">span</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"icon-mobile icon-airplane"</code><code class="plain">>&lt;/</code><code class="keyword">span</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <h3 id="icon-after">icon--after</h3>
 <p><code>.icon--after</code> will add the base classes to the <code>:after</code>
@@ -44,11 +44,11 @@ non-static-positioned parent.</li>
 <h2 id="mixins">Mixins</h2>
 <h3 id="bh-icon-rules">bh-icon-rules</h3>
 <p>Add  the base classes to show an Icon in an element.</p>
-<pre><code class="lang-scss"><div id="highlighter_944734" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.some-selector:before{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code><code class="plain">@include bh-icon-rules;</code></div><div class="line number3 index2 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_610625" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.some-selector:before{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code><code class="plain">@include bh-icon-rules;</code></div><div class="line number3 index2 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <h3 id="bh-icon-after">bh-icon-after</h3>
 <p>Place an icon in a <code>:after</code> element.</p>
-<pre><code class="lang-scss"><div id="highlighter_46178" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.some-selector{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code><code class="plain">@include bh-icon-after(</code><code class="variable">$glyph</code><code class="plain">-name);</code></div><div class="line number3 index2 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_700343" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.some-selector{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code><code class="plain">@include bh-icon-after(</code><code class="variable">$glyph</code><code class="plain">-name);</code></div><div class="line number3 index2 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>
@@ -76,7 +76,7 @@ non-static-positioned parent.</li>
 </table>
 <h3 id="icon-rotator">icon-rotator</h3>
 <p>Rotate an icon<br><em>works for standard <code>:before</code> icons only</em></p>
-<pre><code class="lang-scss"><div id="highlighter_840058" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include icon-rotator(</code><code class="variable">$rotation</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_814188" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include icon-rotator(</code><code class="variable">$rotation</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>
@@ -98,14 +98,14 @@ non-static-positioned parent.</li>
 </table>
 <h4 id="example">Example</h4>
 <p>Create a diagonal chevron.</p>
-<pre><code class="lang-html"><div id="highlighter_68635" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">span</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"icon icon-arrow-down-light diagonal-chevron"</code><code class="plain">>&lt;/</code><code class="keyword">span</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-html"><div id="highlighter_329904" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">span</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"icon icon-arrow-down-light diagonal-chevron"</code><code class="plain">>&lt;/</code><code class="keyword">span</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
 </code></pre>
-<pre><code class="lang-scss"><div id="highlighter_764438" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.diagonal-chevron{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code><code class="plain">@include icon-rotator(-45deg);</code></div><div class="line number3 index2 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_882317" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.diagonal-chevron{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code><code class="plain">@include icon-rotator(-45deg);</code></div><div class="line number3 index2 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <h2 id="functions">Functions</h2>
 <h3 id="bh-get-icon-by-glyph-name">bh-get-icon-by-glyph-name</h3>
 <p>Get the char-code for an icon.</p>
-<pre><code class="lang-scss"><div id="highlighter_429422" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">bh-get-icon-by-glyph-name(</code><code class="variable">$glyph</code><code class="plain">-name);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_205441" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">bh-get-icon-by-glyph-name(</code><code class="variable">$glyph</code><code class="plain">-name);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>

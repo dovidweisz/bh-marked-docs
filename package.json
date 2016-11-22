@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "gulp",
+    "github-sites-build": "SETTINGS_FILE=github-sites-settings gulp",
     "test": "test"
   },
   "author": "Dovid Weisz",
