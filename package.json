@@ -17,6 +17,8 @@
     "lodash": "^4.17.2",
     "memoizee": "^0.4.1",
     "node-syntaxhighlighter": "^0.8.1",
+    "rimraf": "^2.5.4",
+    "run-sequence": "^1.2.2",
     "through2": "^2.0.1"
   }
 }
