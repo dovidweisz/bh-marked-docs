@@ -1,0 +1,46 @@
+@import "foundation";
+
+@import "global";
+
+//$global-width: rem-calc(1200);
+$body-background: $light-gray;
+
+
+
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-table;
+@include foundation-breadcrumbs;
+
+body{
+  min-width: auto;
+}
+.container{
+  margin: rem-calc(0 20);
+
+  padding: rem-calc(20);
+  background-color: $white;
+
+}
+.page-width{
+  max-width: rem-calc($global-width);
+  min-width: rem-calc(450);
+  margin: 0 auto;
+}
+td code{
+  white-space: nowrap;
+}
+
+pre{
+  code{
+    padding: 0;
+    border: 0 none;
+    .syntaxhighlighter{
+      overflow: visible !important;
+      padding: rem-calc(10 0);
+      .gutter{
+        display: none;
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ function addBreadCrumbs(){
   });
 }
 function wrapHtml(titles) {
-  var styles = `<link rel="stylesheet" href="/docs-css/docs-app.css" />
+  var styles = `<link rel="stylesheet" href="/css/index.css" />
                 <link rel="stylesheet" href="/shCoreRDark.css" />`;
   return through.obj(function(file, encoding, callback) {
     var path = helpers.getPath(file),
