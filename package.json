@@ -1,0 +1,22 @@
+{
+  "name": "md-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Dovid Weisz",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-if": "^2.0.2",
+    "gulp-marked": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "lodash": "^4.17.2",
+    "memoizee": "^0.4.1",
+    "node-syntaxhighlighter": "^0.8.1",
+    "through2": "^2.0.1"
+  }
+}
