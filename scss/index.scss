@@ -46,12 +46,9 @@ pre{
 }
 a[target='_BLANK']{
     &::after{
-        content: " ";
+        content: "\1F5D4";
         margin-left: rem-calc(5);
         font-size: rem-calc(10);
         vertical-align: top;
-    }
-    &:hover::after{
-        content: "\1F5D4";
     }
 }
