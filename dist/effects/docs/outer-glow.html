@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+                  <html>
+                  <head>
+                    <link rel="stylesheet" href="/css/index.css" />
+                <link rel="stylesheet" href="/shCoreRDark.css" />
+                    <title>Outer Glow</title>
+                  </head>
+                  <body>
+                    <div class="page-width "><div class="container"><ul class="breadcrumbs"><li><a href="/index.html">Home</a></li><li><a href="/effects/index.html">effects</a></li></ul><h1 id="outer-glow">Outer Glow</h1>
+<h2 id="create-an-effect-similar-to-photoshops-outer-glow-with-a-darkening-blend-mode-">Create an effect similar to photoshops outer-glow (with a darkening blend mode)</h2>
+<p><img src="images/outer-glow-demo.jpg" alt="demonstration"></p>
+<h2 id="classes">Classes</h2>
+<h3 id="bh-outer-glow">bh-outer-glow</h3>
+<p>Creates the basic effect plus a more emphasized hover effect.</p>
+<h3 id="bh-outer-glow-no-hover">bh-outer-glow-no-hover</h3>
+<p>Creates the basic effect with no hover effect</p>
+<h2 id="mixins">Mixins</h2>
+<h3 id="outer-glow-no-hover">outer-glow-no-hover</h3>
+<p>Create an outer-glow with no hover effect</p>
+<pre><code class="lang-scss"><div id="highlighter_358315" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include outer-glow-no-hover(</code><code class="variable">$radius</code><code class="plain">, </code><code class="variable">$color</code><code class="plain">)</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$radius</code></td>
+<td>number</td>
+<td><code>5</code></td>
+<td>size of the glow in pixels</td>
+</tr>
+<tr>
+<td><code>$color</code></td>
+<td>color</td>
+<td><code>$grey80</code></td>
+<td>color of the glow</td>
+</tr>
+</tbody>
+</table>
+<h3 id="outer-glow">outer-glow</h3>
+<p>Create an outer-glow with a hover effect that doubles the radius and darkens the color.</p>
+<pre><code class="lang-scss"><div id="highlighter_489500" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include outer-glow(</code><code class="variable">$radius</code><code class="plain">, </code><code class="variable">$color</code><code class="plain">)</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$radius</code></td>
+<td>number</td>
+<td><code>5</code></td>
+<td>size of the glow in pixels</td>
+</tr>
+<tr>
+<td><code>$color</code></td>
+<td>color</td>
+<td><code>$grey80</code></td>
+<td>color of the glow</td>
+</tr>
+</tbody>
+</table>
+</div></div></body></html>

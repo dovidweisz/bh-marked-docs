@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+                  <html>
+                  <head>
+                    <link rel="stylesheet" href="/css/index.css" />
+                <link rel="stylesheet" href="/shCoreRDark.css" />
+                    <title>Sprite</title>
+                  </head>
+                  <body>
+                    <div class="page-width "><div class="container"><ul class="breadcrumbs"><li><a href="/index.html">Home</a></li><li><a href="/icons-images/index.html">icons-images</a></li></ul><h1 id="sprite">Sprite</h1>
+<h2 id="streamlined-image-spriting">Streamlined image spriting</h2>
+<p>Sprite doesn&#39;t provide any global classes.</p>
+<p>It imports a sass-map of sprite information from
+<code>/client/sass/sprites</code>, and exposes mixins (and a function)
+to implement sprite images.</p>
+<blockquote>
+<p>For information on editing and adding sprite images see
+the documentation in
+<a href="../../../../sprites/">/client/sass/sprites</a></p>
+</blockquote>
+<h2 id="functions">Functions</h2>
+<p>With the exception of the <code>sprite-layout</code> mixin, all mixins
+require a <code>sprite-data</code> map that can be retrieved using a function</p>
+<h3 id="get-sprite-data">get-sprite-data</h3>
+<p>Get a sass-map inluding the data for a named sprite.</p>
+<pre><code class="lang-scss"><div id="highlighter_203985" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">get-sprite-data(</code><code class="variable">$sprite</code><code class="plain">-name);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<p>Properties of the returned map:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dimensions</td>
+<td>A map listing the individual images and their &quot;dimentions&quot;</td>
+</tr>
+<tr>
+<td>img-url</td>
+<td>The path to the sprite image within the <code>client</code> directory.</td>
+</tr>
+</tbody>
+</table>
+<p>Properties of a dimensions map:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left</td>
+<td>Negative positioning in pixels for this image in the sprite</td>
+</tr>
+<tr>
+<td>top</td>
+<td>Negative positioning in pixels for this image in the sprite</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Width for this image within the sprite</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Height for this image within the sprite</td>
+</tr>
+</tbody>
+</table>
+<p><em>There currently is no <code>get-dimensions-data</code> function.
+To retrieve the dimentions you need to use the sass built-in <code>map-get</code></em></p>
+<h2 id="mixins">Mixins</h2>
+<h3 id="sprite-layout">sprite-layout</h3>
+<p>Create all the styles needed for a complete sprite.<br><em>This mixin is meant to be an implementation example.
+Feel free to use it as a reference to create your own implementation</em></p>
+<pre><code class="lang-scss"><div id="highlighter_706777" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-layout(</code><code class="variable">$sprite</code><code class="plain">-name);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$sprite-name</code></td>
+<td>string</td>
+<td>REQUIRED</td>
+<td>The name of a sprite defined in the <code>$sprites</code> hash</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprite">sprite</h3>
+<p>Everything an individual image needs besides for the url.<br><em>combines <code>sprite-base</code>, and <code>sprite-dimensions</code> (below)</em></p>
+<pre><code class="lang-scss"><div id="highlighter_136948" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite(</code><code class="variable">$sprite</code><code class="plain">-dimensions, </code><code class="variable">$display</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$sprite-dimensions</code></td>
+<td>sass-map</td>
+<td>REQUIRED</td>
+<td>A <code>sprite-dimentions</code> map</td>
+</tr>
+<tr>
+<td><code>$display</code></td>
+<td>Css <code>&lt;display&gt;</code></td>
+<td><code>block</code></td>
+<td>element display property</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprite-base">sprite-base</h3>
+<p>Base Sprite styles (not related to a specific one)</p>
+<pre><code class="lang-scss"><div id="highlighter_957776" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-base(</code><code class="variable">$display</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$display</code></td>
+<td>Css <code>&lt;display&gt;</code></td>
+<td><code>block</code></td>
+<td>element display property</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprite-dimensions">sprite-dimensions</h3>
+<p>Set the dimensions for an image<br><em>Combines <code>sprite-position</code>, <code>sprite-height</code>, and <code>sprite-width</code> (below)</em></p>
+<pre><code class="lang-scss"><div id="highlighter_375145" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-dimensions(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$sprite-dimensions</code></td>
+<td>sass-map</td>
+<td>REQUIRED</td>
+<td>A <code>sprite-dimentions</code> map</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprite-position">sprite-position</h3>
+<p>Set the background-position for an image  </p>
+<pre><code class="lang-scss"><div id="highlighter_485652" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-position(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$sprite-dimensions</code></td>
+<td>sass-map</td>
+<td>REQUIRED</td>
+<td>A <code>sprite-dimentions</code> map</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprite-height">sprite-height</h3>
+<p>Set the height for an image  </p>
+<pre><code class="lang-scss"><div id="highlighter_298048" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-height(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$sprite-dimensions</code></td>
+<td>sass-map</td>
+<td>REQUIRED</td>
+<td>A <code>sprite-dimentions</code> map</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sprite-width">sprite-width</h3>
+<p>Set the width for an image  </p>
+<pre><code class="lang-scss"><div id="highlighter_194551" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-width(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$sprite-dimensions</code></td>
+<td>sass-map</td>
+<td>REQUIRED</td>
+<td>A <code>sprite-dimentions</code> map</td>
+</tr>
+</tbody>
+</table>
+</div></div></body></html>
