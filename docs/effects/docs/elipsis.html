@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+                  <html>
+                  <head>
+                    <link rel="stylesheet" href="/css/index.css" />
+                <link rel="stylesheet" href="/shCoreRDark.css" />
+                    <title>Elipsis</title>
+                  </head>
+                  <body>
+                    <div class="page-width "><div class="container"><ul class="breadcrumbs"><li><a href="/index.html">Home</a></li><li><a href="/effects/index.html">effects</a></li></ul><h1 id="elipsis">Elipsis</h1>
+<h2 id="add-elipsis-to-trunkated-multiline-text-">Add elipsis to trunkated multiline text.</h2>
+<p><img src="images/elipsis-demo.jpg" alt="demonstration"></p>
+<blockquote>
+<p>  There are no classes because each element needs it&#39;s own implementation</p>
+</blockquote>
+<h2 id="mixins">Mixins</h2>
+<h3 id="bh-ellipsis">bh-ellipsis</h3>
+<p>Set the height of a container and add elipses when the texts gets bigger than the container.</p>
+<pre><code class="lang-scss"><div id="highlighter_886091" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include bh-ellipsis( </code><code class="variable">$height</code><code class="plain">, </code><code class="variable">$child</code><code class="plain">-selector, </code><code class="variable">$background</code><code class="plain">-color)</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$height</code></td>
+<td>number</td>
+<td>REQUIRED</td>
+<td>Height of the container in pixels</td>
+</tr>
+<tr>
+<td><code>$child-selector</code></td>
+<td>string</td>
+<td><code>.bh-ellipsis-inner</code></td>
+<td>css selector for inner wrapping element</td>
+</tr>
+<tr>
+<td><code>$background-color</code></td>
+<td>color</td>
+<td><code>$white</code></td>
+<td>background-color to be set on the elipses to mask text wrapping element underneath.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="lang-html"><div id="highlighter_614037" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">p</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"product-description"</code><code class="plain">></code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;</code><code class="keyword">div</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"bh-ellipsis-inner"</code><code class="plain">></code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">Product description text of variable length</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">></code></div><div class="line number5 index4 alt2"><code class="plain">&lt;/</code><code class="keyword">p</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<pre><code class="lang-scss"><div id="highlighter_971560" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.product-description{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background-color</code><code class="plain">: </code><code class="variable">$white</code><code class="plain">;</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">@include bh-ellipsis(</code><code class="value">32</code><code class="plain">);</code></div><div class="line number4 index3 alt1"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<p>If you can&#39;t set the class for the inner element, and your background color is not white you need to specify more parameters</p>
+<pre><code class="lang-scss"><div id="highlighter_202299" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.product-description{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$background</code><code class="plain">-color: </code><code class="variable">$bnh</code><code class="plain">;</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background-color</code><code class="plain">: </code><code class="variable">$background</code><code class="plain">-color;</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">@include bh-ellipsis(</code><code class="value">32</code><code class="plain">, </code><code class="string">'.product-description-inner'</code><code class="plain">, </code><code class="variable">$background</code><code class="plain">-color);</code></div><div class="line number5 index4 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<h3 id="bh-ellipsis-hide">bh-ellipsis-hide</h3>
+<p>To remove the effect (on-hover etc.)</p>
+<pre><code class="lang-scss"><div id="highlighter_201577" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include bh-ellipsis-</code><code class="value">hide</code><code class="plain">;</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<p>Example:</p>
+<pre><code class="lang-scss"><div id="highlighter_421068" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.product-description{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">@include bh-ellipsis(</code><code class="value">32</code><code class="plain">);</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&:hover{</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">height</code><code class="plain">: initial;</code></div><div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">@include bh-ellipsis-</code><code class="value">hide</code><code class="plain">;</code></div><div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number7 index6 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+</div></div></body></html>

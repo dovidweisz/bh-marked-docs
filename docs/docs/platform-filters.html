@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+                  <html>
+                  <head>
+                    <link rel="stylesheet" href="/css/index.css" />
+                <link rel="stylesheet" href="/shCoreRDark.css" />
+                    <title>Platform Filters</title>
+                  </head>
+                  <body>
+                    <div class="page-width "><div class="container"><ul class="breadcrumbs"><li><a href="/index.html">Home</a></li></ul><h1 id="platform-filters">Platform Filters</h1>
+<h2 id="tools-for-difrentiating-between-platforms-in-sass-and-css-">Tools for difrentiating between platforms in sass and css.</h2>
+<p>There are two variables that can tell you what platform is being rendered, <code>$bh-is-desktop</code> and <code>$bh-is-mobile</code>. But the better way to use them is by using these mixins and classes.</p>
+<h2 id="classes">Classes</h2>
+<h3 id="hiding">Hiding</h3>
+<p>These classes all apply <code>display: none !important;</code> when their conditions are met:</p>
+<pre><code>bh-show-for-mobile
+bh-hide-for-desktop
+bh-show-for-desktop
+bh-hide-for-mobile
+</code></pre><h3 id="floating">Floating</h3>
+<p>These classes will float elements for the named platform:</p>
+<pre><code>bh-desktop-float-left
+bh-mobile-float-left
+bh-desktop-float-right
+bh-mobile-float-right
+</code></pre><h2 id="mixins">Mixins</h2>
+<p><code>bh-mobile-only</code> and <code>bh-desktop-only</code> allow you to write a block of code that will only be rendered for that specific platform.<br>For example, if you want an element to have the <a href="../effects/docs/outer-glow.html">outer-glow</a> effect, but not on mobile.</p>
+<pre><code class="lang-scss"><div id="highlighter_227072" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.my-special-component{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">background-color</code><code class="plain">: </code><code class="variable">$night</code><code class="plain">;</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">font-weight</code><code class="plain">: </code><code class="variable">$global</code><code class="plain">-weight-semi-</code><code class="value">bold</code><code class="plain">;</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">@include bh-desktop-only{</code></div><div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">@include outer-glow;</code></div><div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number7 index6 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<p><code>bh-mobile-only-breakpoint</code> and <code>bh-desktop-only-breakpoint</code> are similar but they also call Foundations <a href="http://foundation.zurb.com/sites/docs/media-queries.html#breakpoint" target="_BLANK">breakpoint mixin</a>.<br>for example if you want to rotate the chevron in this element -45° on mobile devices smaller than an ipad</p>
+<pre><code class="lang-html"><div id="highlighter_319068" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">div</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"my-special-component-nav icon icon-arrow-down-light"</code><code class="plain">></code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="plain">&lt;/</code><code class="keyword">div</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<p>~</p>
+<pre><code class="lang-scss"><div id="highlighter_483178" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.my-special-component{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">...</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">&-nav{</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="keyword">color</code><code class="plain">: </code><code class="variable">$white</code><code class="plain">;</code></div><div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">@include bh-mobile-only-breakpoint(m-smedium down){</code></div><div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">@include icon-rotator(-45deg);</code></div><div class="line number7 index6 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number8 index7 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">}</code></div><div class="line number9 index8 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<h2 id="functions">Functions</h2>
+<p><code>bh-other-platform</code> will return the oposite-platfors name in a string.</p>
+</div></div></body></html>

@@ -38,11 +38,11 @@ gulp.task("docs", function(){
         return path;
     } )))
     .pipe( gulpAddSrc.append( helpers.hilightCode.stylePath ) )
-    .pipe( gulp.dest("dist/") );
+    .pipe( gulp.dest("docs/") );
 });
 
 gulp.task("clean", function(cb){
-    return rimraf("dist/", cb);
+    return rimraf("docs/", cb);
 });
 
 gulp.task("sass", function(){
@@ -50,7 +50,7 @@ gulp.task("sass", function(){
         .pipe( gulpSass({
             includePaths: [ "node_modules/foundation-sites/scss" ]
         }) )
-        .pipe( gulp.dest("dist/css") );
+        .pipe( gulp.dest("docs/css") );
 });
 
 module.exports = function(){
