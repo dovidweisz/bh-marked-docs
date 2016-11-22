@@ -11,6 +11,7 @@ const rimraf = require("rimraf");
 const sources = require("./md-sources");
 const helpers = require("./helpers");
 const gulpPlugins = require("./gulp-plugins");
+const markedRenderer = require("./marked-renderer");
 
 const isMarkDown = "*.md";
 
@@ -27,7 +28,8 @@ gulp.task("docs", function(){
     .pipe(gulpIf(isMarkDown, gulpPlugins.indexFiles(fileIndexes, titles)))
     .pipe(gulpIf(isMarkDown, gulpPlugins.htmlLinks() ))
     .pipe(gulpIf(isMarkDown, gulpMarked({
-      highlight: helpers.hilightCode
+      highlight: helpers.hilightCode,
+      renderer: markedRenderer
     })))
     .pipe( gulpIf("*.html", gulpPlugins.addBreadCrumbs()))
     .pipe( gulpIf("*.html", gulpPlugins.wrapHtml(titles)))
@@ -50,3 +52,7 @@ gulp.task("sass", function(){
         }) )
         .pipe( gulp.dest("dist/css") );
 });
+
+module.exports = function(){
+    return gulp.start("default");
+}
