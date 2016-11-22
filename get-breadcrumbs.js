@@ -3,6 +3,10 @@
 var fs = require("fs"),
     memoize = require("memoizee");
 
+let settingsFile = process.env.SETTINGS_FILE || "settings";
+
+const siteRoot = require("./" + settingsFile).siteRoot;
+
 function getBreadcrumbs(file){
   //console.log(file.history, file.path);
   var path = file.history[0].replace(/[/\\]readme\.md/i, "").substring(file.base.length);
@@ -37,12 +41,12 @@ var getIndexLink = memoize(function(base, path){
     getHasFile(base + dirPath + "readme.md" ).then(function( hasReadme){
       if(hasReadme) {
         path = path.replace(/\\/g, "/");
-        resolve ( `<li><a href="/${path}index.html">${dirName}</a></li>` );
+        resolve ( `<li><a href="${siteRoot}${path}index.html">${dirName}</a></li>` );
       }else if(dirName == "docs"){
         resolve("");
       }else{
         //resolve( `<li>${dirName}</li>` );
-        resolve ( `<li><a href="/${path}">${dirName}</a></li>` );
+        resolve ( `<li><a href="${siteRoot}${path}">${dirName}</a></li>` );
       }
     });
 
