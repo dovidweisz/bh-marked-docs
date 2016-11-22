@@ -16,6 +16,8 @@ function hilightCode(code, lang, callback) {
   }
 }
 
+hilightCode.stylePath = nsh.getStyles()[7].sourcePath;
+
 
 function mdToHTMLLink(match, filePath){
   if(/\.md$/i.test(filePath)){

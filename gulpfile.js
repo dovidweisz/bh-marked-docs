@@ -24,7 +24,7 @@ gulp.task("docs", function(){
     .pipe(gulpIf(isMarkDown, gulpPlugins.indexFiles(fileIndexes, titles)))
     .pipe(gulpIf(isMarkDown, gulpPlugins.htmlLinks() ))
     .pipe(gulpIf(isMarkDown, gulpMarked({
-      highlight: helpers.hilightCode,
+      highlight: helpers.hilightCode
     })))
     .pipe( gulpIf("*.html", gulpPlugins.addBreadCrumbs()))
     .pipe( gulpIf("*.html", gulpPlugins.wrapHtml(titles)))
@@ -32,6 +32,7 @@ gulp.task("docs", function(){
         path.basename  = "index";
         return path;
     } )))
+    .pipe( gulpAddSrc.append( helpers.hilightCode.stylePath ) )
     .pipe( gulp.dest("dist/") );
 });
 

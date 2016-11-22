@@ -26,7 +26,7 @@ function addBreadCrumbs(){
 }
 function wrapHtml(titles) {
   var styles = `<link rel="stylesheet" href="/docs-css/docs-app.css" />
-                <link rel="stylesheet" href="/docs-css/shCoreRDark.css" />`;
+                <link rel="stylesheet" href="/shCoreRDark.css" />`;
   return through.obj(function(file, encoding, callback) {
     var path = helpers.getPath(file),
         title = titles[path] || "Docs",
