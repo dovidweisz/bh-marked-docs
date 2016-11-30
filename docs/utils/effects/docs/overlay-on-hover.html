@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+                  <html>
+                  <head>
+                    <link rel="stylesheet" href="/bh-marked-docs/css/index.css" />
+                <link rel="stylesheet" href="/bh-marked-docs/shCoreRDark.css" />
+                    <title>Overlay On Hover</title>
+                  </head>
+                  <body>
+                    <div class="page-width "><div class="container"><ul class="breadcrumbs"><li><a href="/bh-marked-docs/index.html">Home</a></li><li><a href="/bh-marked-docs/utils/index.html">utils</a></li><li><a href="/bh-marked-docs/utils/effects/index.html">effects</a></li></ul><h1 id="overlay-on-hover">Overlay On Hover</h1>
+<h2 id="add-a-darkening-overlay-on-hover">Add a darkening overlay on-hover</h2>
+<p><img src="images/overlay-on-hover.jpg" alt="overlay on hover demo"></p>
+<h2 id="classes">Classes</h2>
+<h3 id="overlay-on-hover">overlay-on-hover</h3>
+<p><code>.overlay-on-hover</code></p>
+<h2 id="mixins">Mixins</h2>
+<h3 id="bh-overlay-on-hover">bh-overlay-on-hover</h3>
+<pre><code class="lang-scss"><div id="highlighter_613332" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include bh-overlay-on-hover(</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$offset</code><code class="plain">,</code></div><div class="line number3 index2 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$color</code><code class="plain">,</code></div><div class="line number4 index3 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$parent</code><code class="plain">-position,</code></div><div class="line number5 index4 alt2"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$parent</code><code class="plain">-display,</code></div><div class="line number6 index5 alt1"><code class="undefined spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="variable">$hover</code><code class="plain">-opacity</code></div><div class="line number7 index6 alt2"><code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$offset</code></td>
+<td>number or list</td>
+<td><code>0</code></td>
+<td>offset values passed to <a href="../../layout/docs/stretchy.html">bh-stretchy</a></td>
+</tr>
+<tr>
+<td><code>$color</code></td>
+<td>color</td>
+<td><code>$black</code></td>
+<td>The color for the overlay.               </td>
+</tr>
+<tr>
+<td><code>$parent-position</code></td>
+<td>keyword</td>
+<td><code>relative</code></td>
+<td>Positioning for the containing element   </td>
+</tr>
+<tr>
+<td><code>$parent-display</code></td>
+<td>keyword</td>
+<td><code>block</code></td>
+<td>Containing element display type          </td>
+</tr>
+<tr>
+<td><code>$hover-opacity</code></td>
+<td>number</td>
+<td><code>0.04</code></td>
+<td>Decimal between 0 and 1                      </td>
+</tr>
+</tbody>
+</table>
+</div></div></body></html>

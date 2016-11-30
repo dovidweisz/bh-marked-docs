@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+                  <html>
+                  <head>
+                    <link rel="stylesheet" href="/bh-marked-docs/css/index.css" />
+                <link rel="stylesheet" href="/bh-marked-docs/shCoreRDark.css" />
+                    <title>Icons</title>
+                  </head>
+                  <body>
+                    <div class="page-width "><div class="container"><ul class="breadcrumbs"><li><a href="/bh-marked-docs/index.html">Home</a></li><li><a href="/bh-marked-docs/utils/index.html">utils</a></li><li><a href="/bh-marked-docs/utils/icons-images/index.html">icons-images</a></li></ul><h1 id="icons">Icons</h1>
+<h2 id="add-solid-vector-icons-without-adding-content-to-the-page-">Add solid vector icons without adding content to the page.</h2>
+<h2 id="classes">Classes</h2>
+<h3 id="icon">icon</h3>
+<p><code>.icon</code> adds the base classes to show &#39;an&#39; Icon in the
+<code>:before</code> pseudo-element.</p>
+<h3 id="icon-glyph-name-">icon-{{glyph-name}}</h3>
+<p>This is how a specific icon is selected. A listing of icons
+available can be found <strong><a href="../../../docs/icon-list.html">here</a></strong>.<br>(This will set the content of the <code>:before</code> pseudo-element
+to the char-code representing that glyph in the generated 
+icon-font.)</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-html"><div id="highlighter_425687" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">span</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"icon icon-airplane"</code><code class="plain">>&lt;/</code><code class="keyword">span</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<h3 id="-platform-icon">{{platform}}-icon</h3>
+<p><code>.desktop-icon</code> and <code>.mobile-icon</code> do the same as <code>.icon</code>,
+but only for the specified platform</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-html"><div id="highlighter_937786" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">span</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"icon-mobile icon-airplane"</code><code class="plain">>&lt;/</code><code class="keyword">span</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<h3 id="icon-after">icon--after</h3>
+<p><code>.icon--after</code> will add the base classes to the <code>:after</code>
+pseudo-element.<br><em>Note: This will not work with <code>.icon-{{glyph-name}}</code> and you
+will need to use other means of inserting the glyph char-code
+(see the mixins below).</em></p>
+<h3 id="icon-accessible">icon-accessible</h3>
+<p>Depracated... don&#39;t use it.</p>
+<h3 id="icon-modifiers">icon modifiers</h3>
+<ul>
+<li><code>.rotate-icon-left</code> and <code>.rotate-icon-right</code> will turn an
+icon on its side.</li>
+<li><code>.flip-icon</code> will rotate an icon 180 degrees.</li>
+<li><code>.stretch-icon</code> will make an icon the size of its first
+non-static-positioned parent.</li>
+</ul>
+<h2 id="mixins">Mixins</h2>
+<h3 id="bh-icon-rules">bh-icon-rules</h3>
+<p>Add  the base classes to show an Icon in an element.</p>
+<pre><code class="lang-scss"><div id="highlighter_41907" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.some-selector:before{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code><code class="plain">@include bh-icon-rules;</code></div><div class="line number3 index2 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<h3 id="bh-icon-after">bh-icon-after</h3>
+<p>Place an icon in a <code>:after</code> element.</p>
+<pre><code class="lang-scss"><div id="highlighter_356010" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.some-selector{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code><code class="plain">@include bh-icon-after(</code><code class="variable">$glyph</code><code class="plain">-name);</code></div><div class="line number3 index2 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$glyph-name</code></td>
+<td>string</td>
+<td>REQUIRED</td>
+<td>an <a href="../../../docs/icon-list.html">icon name</a></td>
+</tr>
+<tr>
+<td><code>$add-icon-rules</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>set to false if you&#39;re using this together with the <code>.icon-after</code> class</td>
+</tr>
+</tbody>
+</table>
+<h3 id="icon-rotator">icon-rotator</h3>
+<p>Rotate an icon<br><em>works for standard <code>:before</code> icons only</em></p>
+<pre><code class="lang-scss"><div id="highlighter_314564" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include icon-rotator(</code><code class="variable">$rotation</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$rotation</code></td>
+<td>CSS <code>&lt;angle&gt;</code></td>
+<td>REQUIRED</td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/angle" target="_BLANK">An angle</a> representing the rotation delta</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example">Example</h4>
+<p>Create a diagonal chevron.</p>
+<pre><code class="lang-html"><div id="highlighter_363966" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">&lt;</code><code class="keyword">span</code> <code class="color1">class</code><code class="plain">=</code><code class="string">"icon icon-arrow-down-light diagonal-chevron"</code><code class="plain">>&lt;/</code><code class="keyword">span</code><code class="plain">></code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<pre><code class="lang-scss"><div id="highlighter_323659" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">.diagonal-chevron{</code></div><div class="line number2 index1 alt1"><code class="undefined spaces">&nbsp;&nbsp;</code><code class="plain">@include icon-rotator(-45deg);</code></div><div class="line number3 index2 alt2"><code class="plain">}</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<h2 id="functions">Functions</h2>
+<h3 id="bh-get-icon-by-glyph-name">bh-get-icon-by-glyph-name</h3>
+<p>Get the char-code for an icon.</p>
+<pre><code class="lang-scss"><div id="highlighter_424331" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">bh-get-icon-by-glyph-name(</code><code class="variable">$glyph</code><code class="plain">-name);</code></div></div></td></tr></tbody></table></div>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$glyph-name</code></td>
+<td>string</td>
+<td>REQUIRED</td>
+<td>an <a href="../../../docs/icon-list.html">icon name</a></td>
+</tr>
+</tbody>
+</table>
+</div></div></body></html>
