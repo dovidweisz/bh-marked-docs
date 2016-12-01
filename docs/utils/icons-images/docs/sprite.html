@@ -22,7 +22,7 @@ the documentation in
 require a <code>sprite-data</code> map that can be retrieved using a function</p>
 <h3 id="get-sprite-data">get-sprite-data</h3>
 <p>Get a sass-map inluding the data for a named sprite.</p>
-<pre><code class="lang-scss"><div id="highlighter_835892" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">get-sprite-data(</code><code class="variable">$sprite</code><code class="plain">-name);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_726740" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">get-sprite-data(</code><code class="variable">$sprite</code><code class="plain">-name);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <p>Properties of the returned map:</p>
 <table>
@@ -76,7 +76,7 @@ To retrieve the dimentions you need to use the sass built-in <code>map-get</code
 <h3 id="sprite-layout">sprite-layout</h3>
 <p>Create all the styles needed for a complete sprite.<br><em>This mixin is meant to be an implementation example.
 Feel free to use it as a reference to create your own implementation</em></p>
-<pre><code class="lang-scss"><div id="highlighter_946367" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-layout(</code><code class="variable">$sprite</code><code class="plain">-name);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_873821" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-layout(</code><code class="variable">$sprite</code><code class="plain">-name);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>
@@ -98,7 +98,7 @@ Feel free to use it as a reference to create your own implementation</em></p>
 </table>
 <h3 id="sprite">sprite</h3>
 <p>Everything an individual image needs besides for the url.<br><em>combines <code>sprite-base</code>, and <code>sprite-dimensions</code> (below)</em></p>
-<pre><code class="lang-scss"><div id="highlighter_507229" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite(</code><code class="variable">$sprite</code><code class="plain">-dimensions, </code><code class="variable">$display</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_808161" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite(</code><code class="variable">$sprite</code><code class="plain">-dimensions, </code><code class="variable">$display</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>
@@ -126,7 +126,7 @@ Feel free to use it as a reference to create your own implementation</em></p>
 </table>
 <h3 id="sprite-base">sprite-base</h3>
 <p>Base Sprite styles (not related to a specific one)</p>
-<pre><code class="lang-scss"><div id="highlighter_110579" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-base(</code><code class="variable">$display</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_954893" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-base(</code><code class="variable">$display</code><code class="plain">);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>
@@ -148,7 +148,7 @@ Feel free to use it as a reference to create your own implementation</em></p>
 </table>
 <h3 id="sprite-dimensions">sprite-dimensions</h3>
 <p>Set the dimensions for an image<br><em>Combines <code>sprite-position</code>, <code>sprite-height</code>, and <code>sprite-width</code> (below)</em></p>
-<pre><code class="lang-scss"><div id="highlighter_202001" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-dimensions(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_621960" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-dimensions(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>
@@ -170,7 +170,7 @@ Feel free to use it as a reference to create your own implementation</em></p>
 </table>
 <h3 id="sprite-position">sprite-position</h3>
 <p>Set the background-position for an image  </p>
-<pre><code class="lang-scss"><div id="highlighter_7344" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-position(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_202841" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-position(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>
@@ -192,7 +192,7 @@ Feel free to use it as a reference to create your own implementation</em></p>
 </table>
 <h3 id="sprite-height">sprite-height</h3>
 <p>Set the height for an image  </p>
-<pre><code class="lang-scss"><div id="highlighter_954247" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-height(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_303915" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-height(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>
@@ -214,7 +214,7 @@ Feel free to use it as a reference to create your own implementation</em></p>
 </table>
 <h3 id="sprite-width">sprite-width</h3>
 <p>Set the width for an image  </p>
-<pre><code class="lang-scss"><div id="highlighter_331031" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-width(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
+<pre><code class="lang-scss"><div id="highlighter_107123" class="syntaxhighlighter  "><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain">@include sprite-width(</code><code class="variable">$sprite</code><code class="plain">-dimensions);</code></div></div></td></tr></tbody></table></div>
 </code></pre>
 <table>
 <thead>
