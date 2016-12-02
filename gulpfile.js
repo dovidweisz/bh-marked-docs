@@ -7,6 +7,7 @@ const gulpAddSrc = require('gulp-add-src');
 const gulpSass = require("gulp-sass");
 const sequence = require("run-sequence");
 const rimraf = require("rimraf");
+const fs = require("fs");
 
 let settingsFile = process.env.SETTINGS_FILE || "settings";
 
@@ -32,8 +33,9 @@ gulp.task("default", function(cb){
     , cb);
 } );
 
+let fileIndexes = {};
 gulp.task("docs", function(){
-    let fileIndexes = {};
+    fileIndexes = {};
     let titles = {};
     return gulp.src(sources)
     .pipe(gulpIf(isMarkDown, gulpPlugins.indexFiles(fileIndexes, titles)))
@@ -49,7 +51,20 @@ gulp.task("docs", function(){
         return path;
     } )))
     .pipe( gulpAddSrc.append( helpers.hilightCode.stylePath ) )
-    .pipe( gulp.dest(dest) );
+    .pipe( gulp.dest(dest) )
+    .on("end", function(){
+        var strIndex;
+        try{
+            strIndex = JSON.stringify(fileIndexes);
+            fs.writeFile(`${dest}searchIndex.json`, strIndex);
+        }catch (e){
+            if(strIndex){
+                console.error("Couldn't  save Index! " , e);
+            }else{
+                console.error("Couldn't stringify  Index! " , e)
+            }
+        }
+    });
 });
 
 gulp.task("clean", function(cb){
